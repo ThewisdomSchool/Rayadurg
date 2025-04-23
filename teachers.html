@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Teachers - The Wisdom E/M School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #C5ADC5, #B2B5E0);
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #2D2D2D;
+    }
+
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .teacher-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .teacher-photo {
+      width: 100px;
+      height: 100px;
+      background-color: #A7D8F0;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/29/29302.png');
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .teacher-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #3C7EBB;
+    }
+
+    .underline {
+      width: 40px;
+      height: 4px;
+      background-color: #3C7EBB;
+      border-radius: 2px;
+      margin: 8px auto 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3C7EBB;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #326ca0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meet Our Teachers</h1>
+
+  <div class="teacher-grid">
+    <!-- Sample teachers -->
+    <div class="teacher-card">
+      <div class="teacher-photo"></div>
+      <div class="teacher-name">K.Abdul Khabeer</div>
+      <div class="underline"></div>
+    </div>
+    <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">B.Inayatullah</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">B.Muzammil</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">M.Mohammed Zaid</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">B.Fouziya</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">Ayesha Siddiqa</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">K.Naziya Banu</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">M.Ayesha</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">Takhiya Almas</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">S.Aiman</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">Shaik Sultana</div>
+        <div class="underline"></div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo"></div>
+        <div class="teacher-name">B.Amira Kousar</div>
+        <div class="underline"></div>
+      </div>
+      
+    <!-- Add more teachers as needed -->
+  </div>
+
+  <footer>
+    <a href="index.html" class="home-button">Home</a>
+  </footer>
+
+</body>
+</html>

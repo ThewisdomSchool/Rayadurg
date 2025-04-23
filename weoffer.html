@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offers - The Wisdom E/M School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at 10% 20%, #d0f0d0 10%, #E9F1FA 90%);
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .home-button {
+      background: #f8f8f8;
+      color: #333;
+      padding: 10px 25px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background: #e0e0e0;
+      color: #000;
+    }
+
+    .offer-container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      padding: 20px;
+      max-width: 320px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .offer-container img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .offer-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .offer-desc {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .offers-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .offer-container {
+        max-width: 90%;
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 20px 0;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      background: #f8f8f8;
+      color: #333;
+      padding: 10px 25px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    footer a:hover {
+      background: #e0e0e0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="font-weight:bold; text-align:center;">What We Offer</h1>
+
+  <div class="offers-wrapper">
+    <div class="offer-container">
+      <img src="https://i.ibb.co/tTx7wLWf/IMG-20250422-WA0008.jpg" alt="Islamic Education">
+      <div class="offer-title">Islamic Education</div>
+      <div class="offer-desc">Integrating Quran studies, Hadith comprehension for a holistic understanding of faith.</div>
+    </div>
+
+    <div class="offer-container">
+      <img src="https://i.ibb.co/HD4g9WQQ/IMG-20250201-WA0018.jpg" alt="Experienced Teachers">
+      <div class="offer-title">Experienced Teachers</div>
+      <div class="offer-desc">Our well-qualified and caring faculty provide personal attention in a friendly environment.</div>
+    </div>
+
+    <div class="offer-container">
+      <img src="https://i.ibb.co/Swkq4j1v/IMG-20250422-WA0031.jpg" alt="Co-Curricular Activities">
+      <div class="offer-title">Co-Curricular Activities</div>
+      <div class="offer-desc">From arts to sports, we nurture talents with fun, creativity, and all-round development programs.</div>
+    </div>
+  </div>
+
+  
+  <footer>
+    <a href="teachers.html" class="home-button">Meet Our Team</a>
+  </footer>
+
+</body>
+</html>

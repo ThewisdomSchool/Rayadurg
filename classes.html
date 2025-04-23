@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Classes - The Wisdom E/M School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #C5ADC5, #B2B5E0);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #fff;
+      color: #333;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .home-btn:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+    }
+
+    .classes-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .class-card {
+      background: linear-gradient(135deg, #ffffff, #e6e6fa);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .class-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      color: #2D9C5E;
+    }
+
+    .modal p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .close-btn {
+      margin-top: 20px;
+      background-color: #2D9C5E;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="home-btn">🏠 Home</a>
+
+  <h1>Explore Our Classes</h1>
+
+  <div class="classes-wrapper">
+    <div class="class-card" onclick="showModal('Nursery', 'The Nursery class introduces students to foundational skills in both English and Arabic. Children engage in playful learning through phonics, numeracy, and Arabic letters. Our focus is on language development, basic arithmetic, social interaction, and cultural awareness in both languages.')">Nursery</div>
+    <div class="class-card" onclick="showModal('LKG', 'LKG focuses on foundational language, numbers, and social interaction through engaging activities.')">LKG</div>
+    <div class="class-card" onclick="showModal('UKG', 'UKG enhances early academic skills in reading, writing, and number concepts with hands-on learning.')">UKG</div>
+    <div class="class-card" onclick="showModal('Class 1', 'Class 1 builds on basic math, language, and introduces science, storytelling, and group play.')">Class 1</div>
+    <div class="class-card" onclick="showModal('Class 2', 'Class 2 develops reading fluency, number operations, and basic environmental studies.')">Class 2</div>
+    <div class="class-card" onclick="showModal('Class 3', 'Class 3 strengthens academic base with interactive lessons in languages, math, and general knowledge.')">Class 3</div>
+    <div class="class-card" onclick="showModal('Class 4', 'Class 4 includes deeper subject knowledge, project-based learning, and team activities.')">Class 4</div>
+    <div class="class-card" onclick="showModal('Class 5', 'Class 5 prepares students for upper primary with structured lessons and assessment-based learning.')">Class 5</div>
+    <div class="class-card" onclick="showModal('Class 6', 'Class 6 introduces more defined subjects, independent learning, and analytical thinking.')">Class 6</div>
+    <div class="class-card" onclick="showModal('Class 7', 'Class 7 develops strong academic foundation across all subjects and prepares for higher grades.')">Class 7</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="classModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Class Title</h2>
+      <p id="modalText">Class details go here...</p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showModal(title, text) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalText').textContent = text;
+      document.getElementById('classModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('classModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
